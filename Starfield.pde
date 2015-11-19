@@ -1,26 +1,43 @@
-//your code here
+//https://github.com/jessew927/Starfield/blob/gh-pages/Starfield.pde
 void setup()
 {
-	//your code here
-}
-void draw()
-{
-	//your code here
-}
-class NormalParticle
-{
-	//your code here
-}
-interface Particle
-{
-	//your code here
-}
-class OddballParticle //uses an interface
-{
-	//your code here
-}
-class JumboParticle //uses inheritance
-{
-	//your code here
+	size(500,500);
 }
 
+void draw()
+{
+	
+}
+
+interface Particle
+{
+	
+}
+
+class NormalParticle implements Particle
+{
+	double x, y, angle, speed;
+	int colorP; 
+	NormalParticle()
+	{
+
+	}
+	void move()
+	{
+
+	}
+	void show()
+	{
+
+	}
+}
+
+class OddballParticle implements Particle
+{
+	
+}
+
+class JumboParticle extends OddballParticle
+{
+	
+}

@@ -38,22 +38,75 @@ class NormalParticle implements Particle
 		angle = (Math.PI)*(Math.random()*360);
 		speed = (Math.random()*6) + 3;
 	}
-	void move()
+	public void move()
 	{
-
+		x += Math.cos(angle)*(speed);
+		y += Math.sin(angle)*(speed);
+		if (x<-5 || x > 505)
+		{
+			x = 250.0;
+			y = 250.0;
+			//x += Math.cos(angle)*(speed);
+			//y += Math.sin(angle)*(speed);
+		}
+		if (y<-5 || y > 505)
+		{
+			x = 250.0;
+			y = 250.0;
+			//x += Math.cos(angle)*(speed);
+			//y += Math.sin(angle)*(speed);
+		}
 	}
-	void show()
+	public void show()
 	{
-
+		noStroke();
+		fill(colorN);
+		ellipse((float)x, (float)y, 5, 5);
 	}
 }
 
 class OddballParticle implements Particle
 {
-	
+	int x, y, color1, color2, color3, size;
+	OddballParticle()
+	{
+		x = 250;
+		y = 250;
+		size = 20;
+		color1 = 
+		color2 = 
+		color3 = 
+	}
+	public void move()
+	{
+		x = x + (int)(Math.random()*10-5);
+		y = y + (int)(Math.random()*10-5);
+		if (x<-5 || x > 505)
+		{
+			x = 250;
+			y = 250;
+		}
+		if (y<-5 || y > 505)
+		{
+			x = 250;
+			y = 250;
+		}
+	}
+	public void show()
+	{
+		noStroke();
+		fill(color1, color2, color3);
+		ellipse(x, y, size, size);
+	}
 }
 
 class JumboParticle extends OddballParticle
 {
-	
+	JumboParticle()
+	{
+		color1=
+		color2= 
+		color3= 
+		size = 50;
+	}
 }

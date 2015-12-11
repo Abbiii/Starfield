@@ -1,9 +1,9 @@
 //https://github.com/jessew927/Starfield/blob/gh-pages/Starfield.pde
+Particle [] wat = new Particle[200];
 
 void setup()
 {
 	size(500,500);
-	Particle[] wat = new Particle[200];
 	wat[0] = new JumboParticle();
 	wat[1] = new OddballParticle();
 	for (int i = 2; i < wat.length; i++)
@@ -13,7 +13,7 @@ void setup()
 void draw()
 {
 	background(0);
-	for (int i = 0; i < wat.length; i++)
+	for (int i = 0; i <wat.length ; i++)
 	{
 		wat[i].move();
 		wat[i].show();
@@ -73,9 +73,9 @@ class OddballParticle implements Particle
 		x = 250;
 		y = 250;
 		size = 20;
-		color1 = 
-		color2 = 
-		color3 = 
+		color1 = 255;
+		color2 = 51;
+		color3 = 52;
 	}
 	public void move()
 	{
@@ -104,9 +104,9 @@ class JumboParticle extends OddballParticle
 {
 	JumboParticle()
 	{
-		color1=
-		color2= 
-		color3= 
+		color1= 51;
+		color2= 255;
+		color3= 255;
 		size = 50;
 	}
 }

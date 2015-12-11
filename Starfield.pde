@@ -1,4 +1,3 @@
-//https://github.com/jessew927/Starfield/blob/gh-pages/Starfield.pde
 Particle [] wat;
 
 void setup()
@@ -7,14 +6,14 @@ void setup()
   Particle [] wat = new Particle[200];
   wat[0] = new JumboParticle();
   wat[1] = new OddballParticle();
-  for (int i = 2; i < wat.length(); i++)
+  for (int i = 2; i < wat.length; i++)
     wat[i] = new NormalParticle();
 }
 
 void draw()
 {
   background(0);
-  for (int i = 0; i <wat.length(); i++)
+  for (int i = 0; i < wat.length; i++)
   {
     wat[i].move();
     wat[i].show();
@@ -23,8 +22,8 @@ void draw()
 
 interface Particle
 {
-  public void move;
-  public void show;
+  public void move();
+  public void show();
 }
 
 class NormalParticle implements Particle
